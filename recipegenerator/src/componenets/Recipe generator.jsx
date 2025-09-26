@@ -14,7 +14,7 @@ function RecipeGenerator() {
         setRecipe(''); // Clear the previous recipe
 
         try {
-            const response = await fetch(`http://localhost:8080/recipecreator?ingredients=${ingredients}&dietaryrestrictions=${dietaryrestrictions}&cuisine=${cuisine}`);
+            const response = await fetch(`https://recipefy-chefbot.onrender.com?ingredients=${ingredients}&dietaryrestrictions=${dietaryrestrictions}&cuisine=${cuisine}`);
             const data = await response.text();
             console.log(data);
             setRecipe(data);
