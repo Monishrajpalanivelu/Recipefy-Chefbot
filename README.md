@@ -13,9 +13,11 @@ Backend (Spring Boot API): https://recipefy-chefbot.onrender.com/
 (Note: The backend is hosted on a free service, so the first request might take a moment to "wake up" the server.)
 
 ✨ Features
+
 This application is split into two main AI-powered modules:
 
 1. Recipe Generator
+   
 Ingredient-Based Creation: Simply enter a list of comma-separated ingredients.
 
 Dietary Customization: Specify dietary restrictions (e.g., "vegetarian", "gluten-free") to tailor the recipe.
@@ -23,6 +25,7 @@ Dietary Customization: Specify dietary restrictions (e.g., "vegetarian", "gluten
 Cuisine Specification: Guide the AI by requesting a specific cuisine (e.g., "Italian", "Mexican").
 
 2. ChefBot Assistant
+   
 Conversational AI: Ask any cooking-related question.
 
 Expert Knowledge: Get tips on cooking techniques, ingredient substitutions, or food pairings.
@@ -30,9 +33,11 @@ Expert Knowledge: Get tips on cooking techniques, ingredient substitutions, or f
 Creative Inspiration: Ask for meal ideas for a specific occasion.
 
 🛠️ Tech Stack & Architecture
+
 This project is a full-stack application with a clear separation between the frontend, backend, and AI logic, demonstrating a modern microservice-oriented approach.
 
 Frontend
+
 Framework: React
 
 Styling: CSS with a dynamic, responsive design
@@ -40,20 +45,25 @@ Styling: CSS with a dynamic, responsive design
 Deployment: Netlify
 
 Backend
+
 Framework: Java & Spring Boot
 
 Architecture: REST API
 
+
 Containerization: Docker
+
 
 Deployment: Render
 
 Artificial Intelligence
+
 Provider: Powered by a Large Language Model (LLM) via a REST API.
 
 Core Tasks: Natural Language Understanding (NLU) and Text Generation.
 
 💡 How to Use
+
 Navigate to the live frontend URL.
 
 Select the "Generate Recipe" tab:
