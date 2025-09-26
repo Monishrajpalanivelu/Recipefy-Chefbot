@@ -4,6 +4,12 @@ FROM openjdk:17-slim
 # Set the working directory inside the container
 WORKDIR /app
 
+# --- Environment Variables ---
+# Use ENV to set environment variables.
+# These can be overridden by the deployment platform (like Render).
+# Example: Set an API key for your AI service.
+ENV MISTRAL_API_KEY="NRXovvkzabAfqWmrI1fJsGb9JYnOsDxX"
+
 # Copy the compiled JAR file from the target directory to the container
 COPY target/Recipesuggest-0.0.1-SNAPSHOT.jar app.jar
 
@@ -14,20 +20,12 @@ EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
 ```
 
-### Step 3: Push This Change to GitHub
+### How to Use This
 
-Now, you need to save your work and update your GitHub repository.
+I've added a new section to the `Dockerfile` in the Canvas:
 
-1.  In your terminal, navigate to the root of your entire project.
-2.  Add the new file:
-    ```bash
-    git add .
-    ```
-3.  Commit the change:
-    ```bash
-    git commit -m "Add Dockerfile for Spring Boot backend"
-    ```
-4.  Push to GitHub:
-    ```bash
-    git push origin master
-    
+```dockerfile
+# Use ENV to set environment variables.
+# Example: Set an API key for your AI service.
+ENV MISTRAL_API_KEY="NRXovvkzabAfqWmrI1fJsGb9JYnOsDxX"
+
