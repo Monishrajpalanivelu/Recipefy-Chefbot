@@ -1,7 +1,9 @@
 🍳 Recipefy-Chefbot AI
+
 Welcome to Recipefy-Chefbot, an intelligent culinary assistant designed to inspire your next meal! This full-stack application leverages the power of AI to generate unique recipes from the ingredients you have on hand and answers your cooking questions with a conversational AI chef.
 
 🚀 Live Demo
+
 You can try the live application right now!
 
 Frontend (React App): https://chimerical-wisp-0e018b.netlify.app/
