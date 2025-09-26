@@ -10,7 +10,7 @@ function Chat() {
         setChatResponse(''); // Clear previous response
 
         try {
-            const response = await fetch(`http://localhost:8080/askai?prompt=${prompt}`);
+            const response = await fetch(`https://recipefy-chefbot.onrender.com/askai?prompt=${prompt}`);
             const data = await response.text();
             console.log(data);
             setChatResponse(data);
