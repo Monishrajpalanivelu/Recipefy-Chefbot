@@ -18,14 +18,5 @@ EXPOSE 8080
 
 # Run the JAR file when the container launches
 ENTRYPOINT ["java","-jar","app.jar"]
-```
 
-### How to Use This
-
-I've added a new section to the `Dockerfile` in the Canvas:
-
-```dockerfile
-# Use ENV to set environment variables.
-# Example: Set an API key for your AI service.
-ENV MISTRAL_API_KEY="NRXovvkzabAfqWmrI1fJsGb9JYnOsDxX"
 
