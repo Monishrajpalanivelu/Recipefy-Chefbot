@@ -1,0 +1,203 @@
+/* --- General Body & Background --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FFDAB9, #FFC3A0, #FFAF7B); /* Peachy-orange gradient */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* --- Main App Container --- */
+.App {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85); /* Frosted glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* --- Tab Navigation --- */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+button {
+    padding: 10px 25px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #555;
+    border-radius: 50px; /* Pill shape */
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+button:hover {
+    color: #000;
+}
+
+button.active {
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53); /* Vibrant red-orange gradient for active tab */
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+/* --- Inputs and Forms --- */
+input {
+    padding: 12px 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF6B6B;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+/* --- Image Grid --- */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.empty-image-slot {
+    width: 100%;
+    padding-bottom: 100%;
+    border: 2px dashed #FF8E53;
+    border-radius: 10px;
+    background-color: rgba(255, 237, 213, 0.5); /* Light orange tint */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF8E53;
+    font-size: 2rem;
+}
+
+/* --- Output & Recipe Display --- */
+.output, .recipe-text {
+    margin-top: 25px;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.recipe-text {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-y: auto;
+    font-size: 1rem;
+    line-height: 1.7; /* Increased for better readability */
+    color: #444;
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* Allows text to wrap naturally */
+}
+
+/* --- Style for the Create Recipe Button --- */
+.create-recipe-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+}
+
+.create-recipe-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+}
+
+.create-recipe-btn:active:not(:disabled) {
+  transform: scale(0.98);
+  box-shadow: 0 2px 10px rgba(255, 107, 107, 0.4);
+}
+
+.create-recipe-btn:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: scale(1);
+}
+
+/* --- Style for the Ask AI Button --- */
+.ask-ai-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(45deg, #5b21b6, #9d4edd); /* Purple gradient */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(157, 78, 221, 0.4);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+}
+
+.ask-ai-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(157, 78, 221, 0.5);
+}
+
+.ask-ai-btn:active:not(:disabled) {
+  transform: scale(0.98);
+  box-shadow: 0 2px 10px rgba(157, 78, 221, 0.4);
+}
+
+.ask-ai-btn:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: scale(1);
+}
+
