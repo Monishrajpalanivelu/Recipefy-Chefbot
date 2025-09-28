@@ -1,83 +1,110 @@
 🍳 Recipefy-Chefbot AI
 
-Welcome to Recipefy-Chefbot, an intelligent culinary assistant designed to inspire your next meal! This full-stack application leverages the power of AI to generate unique recipes from the ingredients you have on hand and answers your cooking questions with a conversational AI chef.
+Welcome to Recipefy-Chefbot, an intelligent culinary assistant that inspires your next meal!
+This full-stack application generates unique recipes from the ingredients you provide and answers your cooking questions with a conversational AI chef.
 
 🚀 Live Demo
-
-You can try the live application right now!
 
 Frontend (React App): https://chimerical-wisp-0e018b.netlify.app/
 
 Backend (Spring Boot API): https://recipefy-chefbot.onrender.com/
 
-(Note: The backend is hosted on a free service, so the first request might take a moment to "wake up" the server.)
+⚠️ Note: The backend is hosted on a free tier, so the first request may take a few seconds to “wake up” the server.
 
 ✨ Features
-
-This application is split into two main AI-powered modules:
-
 1. Recipe Generator
-   
-Ingredient-Based Creation: Simply enter a list of comma-separated ingredients.
 
-Dietary Customization: Specify dietary restrictions (e.g., "vegetarian", "gluten-free") to tailor the recipe.
+🥗 Ingredient-Based Creation → Enter a list of comma-separated ingredients.
 
-Cuisine Specification: Guide the AI by requesting a specific cuisine (e.g., "Italian", "Mexican").
+🌱 Dietary Customization → Support for restrictions (e.g., vegetarian, gluten-free).
 
-2. ChefBot Assistant
-   
-Conversational AI: Ask any cooking-related question.
+🍝 Cuisine Specification → Request specific cuisines (e.g., Italian, Mexican).
 
-Expert Knowledge: Get tips on cooking techniques, ingredient substitutions, or food pairings.
+2. ChefBot Assistant/General Purpose
 
-Creative Inspiration: Ask for meal ideas for a specific occasion.
+💬 Conversational AI → Ask any cooking-related question.
+
+👨‍🍳 Expert Knowledge → Cooking techniques, ingredient substitutions, pairings.
+
+🎉 Creative Inspiration → Meal ideas for special occasions.
 
 🛠️ Tech Stack & Architecture
-
-This project is a full-stack application with a clear separation between the frontend, backend, and AI logic, demonstrating a modern microservice-oriented approach.
-
 Frontend
 
-Framework: React
+⚛️ React (SPA)
 
-Styling: CSS with a dynamic, responsive design
+🎨 CSS (responsive & dynamic styling)
 
-Deployment: Netlify
+🌍 Deployed on Netlify
 
 Backend
 
-Framework: Java & Spring Boot
+☕ Java & Spring Boot (REST API)
 
-Architecture: REST API
+📦 Docker containerized
 
-
-Containerization: Docker
-
-
-Deployment: Render
+🌍 Deployed on Render
 
 Artificial Intelligence
 
-Provider: Powered by a Large Language Model (LLM) via a REST API.
+🤖 Large Language Model (LLM) via REST API
 
-Core Tasks: Natural Language Understanding (NLU) and Text Generation.
+🧠 Tasks: Natural Language Understanding (NLU) & Text Generation
 
-💡 How to Use
+Follow these steps to run Recipefy-Chefbot locally:
 
-Navigate to the live frontend URL.
+1. Clone the Repository
+git clone https://github.com/Monishrajpalanivelu/Recipefy-Chefbot.git
+cd Recipefy-Chefbot
 
-Select the "Generate Recipe" tab:
+2. Setup the Backend (Spring Boot API)
+cd backend
+./mvnw spring-boot:run
 
-Enter your ingredients in the first input box.
 
-Optionally, add dietary needs or a desired cuisine.
+The backend should now be running at http://localhost:8080
 
-Click "Create Recipe" and wait for the AI to craft your meal plan.
+3. Setup the Frontend (React App)
+cd frontend
+npm install
+npm start
 
-Select the "ChatBot" tab:
 
-Type a question into the prompt box.
+The frontend should now be running at http://localhost:3000
 
-Click "Ask ChefBot" to get a helpful response from the culinary assistant.
+4. Environment Variables
 
-We'll continue troubleshooting the deployment tomorrow. You've made incredible progress!
+Create a .env file inside the frontend and backend directories. Example:
+
+Frontend (frontend/.env)
+REACT_APP_API_URL=http://localhost:8080
+
+Backend (backend/.env)
+AI_API_KEY=your_ai_api_key_here
+
+🧑‍🍳 Usage
+Generate Recipes
+
+Open http://localhost:3000
+
+Navigate to the Recipe Generator tab
+
+Enter ingredients, dietary needs, or desired cuisine
+
+Click Create Recipe
+
+Chat with ChefBot
+
+Go to the ChatBot tab
+
+Ask any cooking-related question
+
+Get instant expert advice!
+
+📦 Deployment
+
+Frontend → Deployed on Netlify
+
+Backend → Deployed on Render
+
+Docker used for containerization
