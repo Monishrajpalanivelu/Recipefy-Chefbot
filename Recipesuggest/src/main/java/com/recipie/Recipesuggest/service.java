@@ -6,10 +6,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class service {
-    @Value(("${spring.ai.mistralai.api-key}"))
+    
+    @Value("${spring.ai.mistralai.api-key}")
     private String apikey;
+
     @PostConstruct
     public void checkkey(){
-        System.out.println("Mist API Key :" + apikey);
+        if (apikey == null || apikey.trim().isEmpty()) {
+            System.err.println("WARNING: Mistral API Key is missing!");
+        } else {
+            System.out.println("Mistral API Key has been loaded successfully.");
+        }
     }
 }
