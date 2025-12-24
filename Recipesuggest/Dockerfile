@@ -1,5 +1,5 @@
 # Stage 1: The Builder - This stage compiles the Java code
-FROM maven:3.8.5-openjdk-17 AS builder
+FROM eclipse-temurin:17-jdk-jammy AS builder
 
 # Set the working directory inside the builder
 WORKDIR /build
@@ -22,7 +22,7 @@ RUN mvn package -DskipTests
 
 
 # Stage 2: The Runner - This is the final, lightweight container
-FROM openjdk:17-slim
+FROM eclipse-temurin:17-jre-jammy
 
 # Set the working directory for the final application
 WORKDIR /app
