@@ -7,8 +7,7 @@ This full-stack application generates unique recipes from the ingredients you pr
 
 ## 🚀 Live Demo
 
-* **Frontend (React App):https://chimerical-wisp-0e018b.netlify.app/
-* **Backend (Spring Boot API):(https://recipefy-chefbot.onrender.com/
+React App :https://chimerical-wisp-0e018b.netlify.app/
 
 ⚠️ *Note: The backend is hosted on a free tier, so the first request may take a few seconds to “wake up” the server.*
 
