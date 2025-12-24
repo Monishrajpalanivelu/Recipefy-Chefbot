@@ -1,41 +1,37 @@
-# Stage 1: The Builder - This stage compiles the Java code
+# Stage 1: Builder
 FROM eclipse-temurin:17-jdk-jammy AS builder
 
-# Set the working directory inside the builder
 WORKDIR /build
 
-# Copy the Maven project file
+# Copy pom.xml first (for caching)
 COPY Recipesuggest/pom.xml .
 
-# Copy the Maven wrapper so we can build
+# Copy Maven Wrapper
 COPY Recipesuggest/.mvn ./.mvn
 COPY Recipesuggest/mvnw .
 
-# Download dependencies first to leverage Docker's cache
-RUN mvn dependency:go-offline
+# Make mvnw executable
+RUN chmod +x mvnw
 
-# Copy the rest of the source code
+# Download dependencies (cache-friendly)
+RUN ./mvnw dependency:go-offline
+
+# Copy source code
 COPY Recipesuggest/src ./src
 
-# Build the application, creating the JAR file. Skip tests to speed up.
-RUN mvn package -DskipTests
+# Build jar
+RUN ./mvnw package -DskipTests
 
 
-# Stage 2: The Runner - This is the final, lightweight container
+# Stage 2: Runner
 FROM eclipse-temurin:17-jre-jammy
 
-# Set the working directory for the final application
 WORKDIR /app
 
-# --- Environment Variables ---
 ENV OPENAI_API_KEY="your_default_key_here"
 
-# Copy the compiled JAR file from the builder stage into this final container
 COPY --from=builder /build/target/Recipesuggest-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose the port the application runs on
 EXPOSE 8080
 
-# The command to run the application
 ENTRYPOINT ["java","-jar","app.jar"]
-
