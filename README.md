@@ -1,53 +1,53 @@
-# 🍳 Recipefy-Chefbot AI
+#  Recipefy-Chefbot AI
 
 Welcome to **Recipefy-Chefbot**, an intelligent culinary assistant that inspires your next meal!
 This full-stack application generates unique recipes from the ingredients you provide and answers your cooking questions with a conversational AI chef.
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 React App :https://chimerical-wisp-0e018b.netlify.app/
 
-⚠️ *Note: The backend is hosted on a free tier, so the first request may take a few seconds to “wake up” the server.*
+ *Note*: The backend is hosted on a free tier, so the first request may take a few seconds to “wake up” the server.*
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🍲 Recipe Generator
+###  Recipe Generator
 
-* 🥗 Ingredient-Based Creation → Enter a list of comma-separated ingredients
-* 🌱 Dietary Customization → Support for restrictions (e.g., *vegetarian*, *gluten-free*)
-* 🍝 Cuisine Specification → Request specific cuisines (e.g., *Italian*, *Mexican*)
+*  Ingredient-Based Creation → Enter a list of comma-separated ingredients
+*  Dietary Customization → Support for restrictions (e.g., *vegetarian*, *gluten-free*)
+*  Cuisine Specification → Request specific cuisines (e.g., *Italian*, *Mexican*)
 
-### 👨‍🍳 ChefBot Assistant / General Purpose
+###  ChefBot Assistant / General Purpose
 
-* 💬 Conversational AI → Ask any cooking-related question
-* 🧑‍🍳 Expert Knowledge → Cooking techniques, ingredient substitutions, pairings
-* 🎉 Creative Inspiration → Meal ideas for special occasions
+*  Conversational AI → Ask any cooking-related question
+*  Expert Knowledge → Cooking techniques, ingredient substitutions, pairings
+*  Creative Inspiration → Meal ideas for special occasions
 
-## 🛠️ Tech Stack & Architecture
+##  Tech Stack & Architecture
 
 ### Frontend
 
-* ⚛️ React (SPA)
-* 🎨 CSS (responsive & dynamic styling)
-* 🌍 Deployed on **Netlify**
+*  React (SPA)
+*  CSS (responsive & dynamic styling)
+*  Deployed on **Netlify**
 
 ### Backend
 
-* ☕ Java & Spring Boot (REST API)
-* 📦 Docker containerized
-* 🌍 Deployed on **Render**
+*  Java & Spring Boot (REST API)
+*  Docker containerized
+*  Deployed on **Render**
 
 ### Artificial Intelligence
 
-* 🤖 Large Language Model (LLM) via REST API
-* 🧠 Natural Language Understanding (NLU) & Text Generation
+*  Large Language Model (LLM) via REST API
+*  Natural Language Understanding (NLU) & Text Generation
 
 
-## 📂 Project Structure
+##  Project Structure
 
 ```plaintext
 Recipefy-Chefbot/
@@ -63,9 +63,9 @@ Recipefy-Chefbot/
 ```
 
 
-## ⚙️ Local Setup
+##  Local Setup
 
-### 🔹 Prerequisites
+###  Prerequisites
 
 * **Node.js** ≥ 18
 * **Java** 17
@@ -115,7 +115,7 @@ AI_API_KEY=your_ai_api_key_here
 
 ---
 
-## 🧑‍🍳 Usage
+##  Usage
 
 ### Generate Recipes
 
@@ -131,7 +131,7 @@ AI_API_KEY=your_ai_api_key_here
 3. Get instant expert advice 🍴
 
 
-## 📦 Deployment
+##  Deployment
 
 * **Frontend** → Deployed on [Netlify](https://www.netlify.com/)
 * **Backend** → Deployed on [Render](https://render.com/)
